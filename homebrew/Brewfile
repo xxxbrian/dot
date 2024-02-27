@@ -1,0 +1,352 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "jesseduffield/lazygit"
+tap "oven-sh/bun"
+tap "teamookla/speedtest"
+tap "xgadget-lab/nexttrace"
+# General-purpose data compression with high compression ratio
+brew "xz"
+# Codec library for encoding and decoding AV1 video streams
+brew "aom"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Columnar in-memory analytics layer designed to accelerate big data
+brew "apache-arrow"
+# Download with resuming and segmented downloading
+brew "aria2"
+# Clone of cat(1) with syntax highlighting and Git integration
+brew "bat"
+# Interface bandwidth monitor
+brew "bmon"
+# Yet another cross-platform graphical process/system monitor
+brew "bottom"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# C parser in Python
+brew "pycparser"
+# C Foreign Function Interface for Python
+brew "cffi"
+# Cross-platform make
+brew "cmake"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Package for scientific computing with Python
+brew "numpy"
+# Bindings to the libgit2 shared library
+brew "pygit2"
+# Cryptographic recipes and primitives for Python
+brew "python-cryptography"
+# Git for data science projects
+brew "dvc"
+# Image processing and image analysis library
+brew "leptonica"
+# Multi-format archive and compression library
+brew "libarchive"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+# Disk usage analyzer with console interface written in Go
+brew "gdu"
+# GitHub command-line tool
+brew "gh"
+# Git extension for versioning large files
+brew "git-lfs"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Development kit for the Java programming language
+brew "openjdk"
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle@7"
+# Improved top (interactive process viewer)
+brew "htop"
+# macOS Big Sur Adaptive Icon Generator
+brew "iconsur"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Neural Network Go engine with no human-provided knowledge
+brew "katago"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Cryptographic library based on the code from GnuPG
+brew "libgcrypt"
+# C library for the MaxMind DB file format
+brew "libmaxminddb"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
+# Powerful, lightweight programming language
+brew "lua"
+# Menu-driven communications program
+brew "minicom"
+# C library for zip/unzip via zLib
+brew "minizip"
+# 'traceroute' and 'ping' in a single tool
+brew "mtr"
+# Tool for querying IP geographic information and CDN provider
+brew "nali"
+# Fast, highly customisable system info script
+brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Small build system for use with gyp or CMake
+brew "ninja"
+# Port scanning utility for large networks
+brew "nmap"
+# Manage multiple Node.js versions
+brew "nvm"
+# Development kit for the Java programming language
+brew "openjdk@11"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
+# Python version management
+brew "pyenv"
+# Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv"
+# Cross-platform application and UI framework
+brew "qt@5"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Rust toolchain installer
+brew "rustup-init"
+# SMART hard drive monitoring
+brew "smartmontools"
+# Speex audio processing library
+brew "speexdsp"
+# Cross-shell prompt for astronauts
+brew "starship"
+# Tool to impose load on and stress test a computer system
+brew "stress"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Command-line interface to the WakaTime api
+brew "wakatime-cli"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
+# Watch files and take action when they change
+brew "watchman"
+# Internet file retriever
+brew "wget"
+# HTTP benchmarking tool
+brew "wrk"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# A simple terminal UI for git commands, written in Go
+brew "jesseduffield/lazygit/lazygit"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
+brew "oven-sh/bun/bun"
+# Ookla Speedtest
+brew "teamookla/speedtest/speedtest"
+# An open source visual route tracking CLI tool
+brew "xgadget-lab/nexttrace/nexttrace"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
+# Command-line interface for 1Password
+cask "1password-cli"
+# Intelligent cloud storage platform
+cask "adrive"
+# iOS App Store alternative
+cask "altserver"
+# Chromium based browser
+cask "arc"
+# Electronics prototyping platform
+cask "arduino-ide"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher"
+# 3D model editor for boxy models and pixel art textures
+cask "blockbench"
+# Database version management tool
+cask "dbngin"
+# Voice and text chat software
+cask "discord"
+# Social software for creating music short videos
+cask "douyin"
+# Launcher for *Epic Games* games
+cask "epic-games"
+# Collaborative team software
+cask "figma"
+# Free monospaced font with programming ligatures
+cask "font-fira-code"
+# Developer targeted fonts with a high number of glyphs
+cask "font-fira-code-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-hack-nerd-font"
+# Typeface made for developers
+cask "font-jetbrains-mono"
+# Web browser
+cask "google-chrome"
+# Client for the Google Drive storage service
+cask "google-drive"
+# App for (re)signing iOS apps and bundling them
+cask "ios-app-signer"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Discover, download, and run local LLMs
+cask "lm-studio"
+# Software for Logitech devices
+cask "logi-options-plus"
+# UI replacement for volume, brightness and now playing controls
+cask "mediamate"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
+# Sandbox construction video game
+cask "minecraft"
+# Run Stable Diffusion natively
+cask "mochi-diffusion"
+# Interactive tool for analyzing MongoDB data
+cask "mongodb-compass"
+# Open-source download manager
+cask "motrix"
+# Music streaming platform
+cask "neteasemusic"
+# Tool to scan and monitor the network
+cask "network-radar"
+# App to write, plan, collaborate, and get organised
+cask "notion"
+# Cloud gaming platform
+cask "nvidia-geforce-now"
+# Open-source software for live streaming and screen recording
+cask "obs"
+# Replacement for Docker Desktop
+cask "orbstack"
+# Remote desktop
+cask "parsec"
+# Companion app for Flipper Zero devices
+cask "qflipper"
+# Instant messaging tool
+cask "qq"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Go board and SGF editor
+cask "sabaki"
+# Collection of apps available by subscription
+cask "setapp"
+# Open source cross-platform file explorer
+cask "spacedrive"
+# Music streaming service
+cask "spotify"
+# Video game digital distribution service
+cask "steam"
+# Text editor for code, markup and prose
+cask "sublime-text"
+# Network toolbox
+cask "surge"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Cloud video conferencing
+cask "tencent-meeting"
+# Multi-platform VNC client and server
+cask "tigervnc-viewer"
+# Git client focusing on power and productivity
+cask "tower"
+# Configurable document editor that supports Markdown
+cask "typora"
+# Management tool for Unity
+cask "unity-hub"
+# Open-source code editor
+cask "visual-studio-code"
+# Create, manage, and run virtual machines
+cask "vmware-fusion"
+# Text input app
+cask "wetype"
+# Wine wrapper built with SwiftUI
+cask "whisky"
+# Compatibility layer to run Windows applications
+cask "wine-stable"
+# Network protocol analyzer
+cask "wireshark-chmodbpf"
+# Multiplayer code editor
+cask "zed"
+# Mesh VPN client
+cask "zerotier-one"
+# Video communication and virtual meeting platform
+cask "zoom"
+vscode "ahmadawais.shades-of-purple"
+vscode "antfu.icons-carbon"
+vscode "bitwisecook.tcl"
+vscode "bradlc.vscode-tailwindcss"
+vscode "campbellhe.vscode-mips-mars"
+vscode "dbaeumer.vscode-eslint"
+vscode "donjayamanne.python-environment-manager"
+vscode "eamodio.gitlens"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.code-runner"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "github.vscode-github-actions"
+vscode "golang.go"
+vscode "hediet.vscode-drawio"
+vscode "humao.rest-client"
+vscode "icrawl.discord-vscode"
+vscode "janisdd.vscode-edit-csv"
+vscode "jock.svg"
+vscode "kdarkhan.mips"
+vscode "kelvin.vscode-sshfs"
+vscode "leetcode.vscode-leetcode"
+vscode "lennartlence.chadcommit"
+vscode "mechatroner.rainbow-csv"
+vscode "mhutchie.git-graph"
+vscode "mongodb.mongodb-vscode"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-powertoys"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode-remote.remote-wsl"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.hexeditor"
+vscode "ms-vscode.live-server"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "mtxr.sqltools"
+vscode "njpwerner.autodocstring"
+vscode "pkief.material-icon-theme"
+vscode "pnp.polacode"
+vscode "pranaygp.vscode-css-peek"
+vscode "prisma.prisma"
+vscode "redhat.java"
+vscode "reditorsupport.r"
+vscode "rust-lang.rust-analyzer"
+vscode "rvest.vs-code-prettier-eslint"
+vscode "ryanluker.vscode-coverage-gutters"
+vscode "shd101wyy.markdown-preview-enhanced"
+vscode "shengchen.vscode-checkstyle"
+vscode "tamasfe.even-better-toml"
+vscode "tauri-apps.tauri-vscode"
+vscode "uctakeoff.vscode-counter"
+vscode "unifiedjs.vscode-mdx"
+vscode "vadimcn.vscode-lldb"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
+vscode "vscodevim.vim"
+vscode "vue.volar"
+vscode "wakatime.vscode-wakatime"
+vscode "wayou.vscode-todo-highlight"
+vscode "yzhang.markdown-all-in-one"
+vscode "zignd.html-css-class-completion"

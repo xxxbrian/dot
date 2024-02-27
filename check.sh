@@ -12,5 +12,8 @@ cp ~/.config/starship.toml ./config/starship.toml # starship
 # duplicate zshrc file
 cp ~/.zshrc ./home/.zshrc
 
+# dump homebrew packages
+brew bundle dump --describe --force --file="$(pwd)/homebrew/Brewfile"
+
 # git status
 git status
