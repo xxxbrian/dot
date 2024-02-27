@@ -15,5 +15,8 @@ cp ~/.zshrc ./home/.zshrc
 # dump homebrew packages
 brew bundle dump --describe --force --file="$(pwd)/homebrew/Brewfile"
 
+# iterm2
+echo "Remember to check iTerm2 manually!"
+
 # git status
 git status
