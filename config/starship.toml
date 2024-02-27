@@ -1,0 +1,29 @@
+# PROMPT="%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%}"
+# PROMPT+=' $(git_prompt_info)'
+
+# ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+# ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}%1{✗%}"
+# ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+
+# A minimal left prompt
+format = """$character $directory $git_branch"""
+
+# move the rest of the prompt to the right
+right_format = """$all"""
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+error_symbol = '[➜](bold red)' # The 'error_symbol' segment is being set to '➜' with the color 'bold red'
+
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style)'
+style = 'bold bright-cyan'
+
+[docker_context]
+disabled = true
+
+[git_branch]
+disabled = false
+style = "bold blue"
+format = '(bold green)[$symbol$branch(:$remote_branch)]($style) '

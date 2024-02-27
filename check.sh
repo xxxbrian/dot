@@ -6,5 +6,8 @@ if [ ! -f "check.sh" ]; then
   exit 1
 fi
 
+# duplicate configuration file
+cp ~/.config/starship.toml ./config/starship.toml # starship
+
 # git status
 git status
