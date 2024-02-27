@@ -9,5 +9,8 @@ fi
 # duplicate configuration file
 cp ~/.config/starship.toml ./config/starship.toml # starship
 
+# duplicate zshrc file
+cp ~/.zshrc ./home/.zshrc
+
 # git status
 git status
