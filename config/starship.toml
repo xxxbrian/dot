@@ -6,6 +6,8 @@
 # ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}%1{✗%}"
 # ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
+add_newline = false
+
 # A minimal left prompt
 format = """$character $directory $git_branch"""
 
@@ -14,7 +16,7 @@ right_format = """$all"""
 
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-error_symbol = '[➜](bold red)' # The 'error_symbol' segment is being set to '➜' with the color 'bold red'
+error_symbol = '[➜](bold red)'     # The 'error_symbol' segment is being set to '➜' with the color 'bold red'
 
 [directory]
 format = '[$path]($style)[$read_only]($read_only_style)'
@@ -27,3 +29,6 @@ disabled = true
 disabled = false
 style = "bold blue"
 format = '(bold green)[$symbol$branch(:$remote_branch)]($style) '
+
+[line_break]
+disabled = true
