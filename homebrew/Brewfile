@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "oven-sh/bun"
@@ -71,8 +70,12 @@ brew "gradle@7"
 brew "htop"
 # macOS Big Sur Adaptive Icon Generator
 brew "iconsur"
+# Install and debug iPhone apps from the command-line
+brew "ios-deploy"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
+# Official CLI for the IPinfo IP Address API
+brew "ipinfo-cli"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Neural Network Go engine with no human-provided knowledge
@@ -81,6 +84,8 @@ brew "katago"
 brew "python@3.11"
 # Cryptographic library based on the code from GnuPG
 brew "libgcrypt"
+# Library to communicate with iOS devices natively
+brew "libimobiledevice"
 # C library for the MaxMind DB file format
 brew "libmaxminddb"
 # C library SSHv1/SSHv2 client and server protocols
@@ -141,6 +146,8 @@ brew "watchman"
 brew "wget"
 # HTTP benchmarking tool
 brew "wrk"
+# Generate your Xcode project from a spec file and your folder structure
+brew "xcodegen"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
 # Fish shell like syntax highlighting for zsh
@@ -179,6 +186,8 @@ cask "douyin"
 cask "epic-games"
 # Collaborative team software
 cask "figma"
+# Web browser
+cask "firefox"
 # Free monospaced font with programming ligatures
 cask "font-fira-code"
 # Developer targeted fonts with a high number of glyphs
