@@ -32,14 +32,14 @@ brew "cffi"
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# Cryptographic recipes and primitives for Python
+brew "cryptography"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Package for scientific computing with Python
 brew "numpy"
 # Bindings to the libgit2 shared library
 brew "pygit2"
-# Cryptographic recipes and primitives for Python
-brew "python-cryptography"
 # Git for data science projects
 brew "dvc"
 # Image processing and image analysis library
@@ -174,8 +174,6 @@ cask "arc"
 cask "arduino-ide"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# 3D model editor for boxy models and pixel art textures
-cask "blockbench"
 # Database version management tool
 cask "dbngin"
 # Voice and text chat software
@@ -196,6 +194,8 @@ cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 # Typeface made for developers
 cask "font-jetbrains-mono"
+# Git client for simultaneous branches on top of your existing workflow
+cask "gitbutler"
 # Web browser
 cask "google-chrome"
 # Client for the Google Drive storage service
@@ -240,6 +240,8 @@ cask "qflipper"
 cask "qq"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Open source virtual/remote desktop application
+cask "rustdesk"
 # Go board and SGF editor
 cask "sabaki"
 # Collection of apps available by subscription
@@ -310,6 +312,7 @@ vscode "lennartlence.chadcommit"
 vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
 vscode "mongodb.mongodb-vscode"
+vscode "moshfeu.compare-folders"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
