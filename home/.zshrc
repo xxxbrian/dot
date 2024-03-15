@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+# zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -129,4 +129,4 @@ export PATH=$PATH:$HOME/go/bin
 # starship
 eval "$(starship init zsh)"
 
-zprof
+# zprof
