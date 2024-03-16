@@ -9,6 +9,8 @@ fi
 # duplicate configuration file
 cp ~/.config/starship.toml ./config/starship.toml # starship
 
+cp ~/.wezterm.lua ./wezterm/wezterm.lua # wezterm
+
 # duplicate zshrc file
 cp ~/.zshrc ./home/.zshrc
 
