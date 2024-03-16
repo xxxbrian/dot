@@ -274,6 +274,8 @@ cask "visual-studio-code"
 cask "vmware-fusion"
 # Text input app
 cask "wetype"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 # Wine wrapper built with SwiftUI
 cask "whisky"
 # Compatibility layer to run Windows applications
@@ -346,6 +348,7 @@ vscode "rvest.vs-code-prettier-eslint"
 vscode "ryanluker.vscode-coverage-gutters"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "shengchen.vscode-checkstyle"
+vscode "sumneko.lua"
 vscode "tamasfe.even-better-toml"
 vscode "tauri-apps.tauri-vscode"
 vscode "uctakeoff.vscode-counter"
