@@ -8,10 +8,11 @@ local config = wezterm.config_builder()
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 
 -- Set the default font and size
-config.font = wezterm.font_with_fallback {
-  'JetBrains Mono',
-  'FiraCodeNFM',
-}
+-- config.font = wezterm.font_with_fallback {
+--   'JetBrains Mono',
+--   'FiraCodeNFM',
+-- }
+config.font = wezterm.font("JetBrains Mono")
 config.font_size = 13.0
 
 -- Set the color scheme
