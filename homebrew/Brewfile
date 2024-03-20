@@ -16,6 +16,8 @@ brew "openssl@3"
 brew "apache-arrow"
 # Download with resuming and segmented downloading
 brew "aria2"
+# Improved shell history for zsh, bash, fish and nushell
+brew "atuin"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Interface bandwidth monitor
@@ -50,6 +52,8 @@ brew "libarchive"
 brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Disk usage analyzer with console interface written in Go
 brew "gdu"
 # GitHub command-line tool
