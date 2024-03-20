@@ -128,7 +128,8 @@ export NEXTTRACE_DATAPROVIDER=ipinfo
 export PATH=$PATH:$HOME/go/bin
 # starship
 eval "$(starship init zsh)"
-# atuin
-eval "$(atuin init zsh --disable-up-arrow)"
+# fzf
+eval "$(fzf --zsh)"
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 
 # zprof
