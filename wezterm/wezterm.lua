@@ -1,5 +1,5 @@
 -- Pull in the wezterm API
-local wezterm = require 'wezterm'
+local wezterm = require("wezterm")
 
 -- This will hold the configuration.
 local config = wezterm.config_builder()
@@ -47,7 +47,7 @@ config.colors = {
   -- selection_fg = "#f1d000",
   -- selection_bg = "#add6ff80",
   cursor_border = "#f8cb37",
-  cursor_bg = "#f8cb37"
+  cursor_bg = "#f8cb37",
 }
 
 -- Make all bold text bright
@@ -75,26 +75,23 @@ local function tab_title(tab_info)
 end
 
 -- This event is triggered when the tab's title changes
-wezterm.on(
-  'format-tab-title',
-  function(tab, tabs, panes, config, hover, max_width)
-    local title = tab_title(tab)
-    if tab.is_active then
-      return {
-        --  Active tab is yellow
-        { Background = { Color = '#131224' } },
-        { Foreground = { Color = "#f8cb37" } },
-        { Text = ' ' .. title .. ' ' },
-      }
-    else
-      return {
-        -- Inactive tabs are dark
-        { Background = { Color = '#0e0d21' } },
-        { Text = ' ' .. title .. ' ' },
-      }
-    end
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+  local title = tab_title(tab)
+  if tab.is_active then
+    return {
+      --  Active tab is yellow
+      { Background = { Color = "#131224" } },
+      { Foreground = { Color = "#f8cb37" } },
+      { Text = " " .. title .. " " },
+    }
+  else
+    return {
+      -- Inactive tabs are dark
+      { Background = { Color = "#0e0d21" } },
+      { Text = " " .. title .. " " },
+    }
   end
-)
+end)
 
 -- FPS for the animation(default is 10)
 config.animation_fps = 30
