@@ -27,6 +27,7 @@ sudo apt-get install -y unzip
 sudo apt-get install -y tree
 sudo apt-get install -y neofetch
 sudo apt-get install -y fzf
+sudo apt-get install -y ripgrep
 
 # Install oh-my-zsh
 sudo chsh -s $(which zsh) brian
@@ -58,9 +59,9 @@ mkdir -p /home/brian/.config && wget https://raw.githubusercontent.com/xxxbrian/
 echo -e "[container]\nformat = '[\$symbol Orbstack](\$style) '\n" >> /home/brian/.config/starship.toml
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
-# Install atuin
-cargo install atuin
-echo 'eval "$(atuin init zsh --disable-up-arrow)"' >> ~/.zshrc
+# Setup fzf
+echo 'eval "$(fzf --zsh)"' >> ~/.zshrc
+echo 'export FZF_DEFAULT_COMMAND="rg --files --hidden"' >> ~/.zshrc
 
 # Finish message
 curl -s https://raw.githubusercontent.com/xxxbrian/dot/main/orb/img/orbstack-name.png | wezterm imgcat && echo "VM Setup Complete!"
