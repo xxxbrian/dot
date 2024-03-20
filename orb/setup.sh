@@ -58,5 +58,9 @@ mkdir -p /home/brian/.config && wget https://raw.githubusercontent.com/xxxbrian/
 echo -e "[container]\nformat = '[\$symbol Orbstack](\$style) '\n" >> /home/brian/.config/starship.toml
 echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 
+# Install atuin
+cargo install atuin
+echo 'eval "$(atuin init zsh --disable-up-arrow)"' >> ~/.zshrc
+
 # Finish message
 curl -s https://raw.githubusercontent.com/xxxbrian/dot/main/orb/img/orbstack-name.png | wezterm imgcat && echo "VM Setup Complete!"
