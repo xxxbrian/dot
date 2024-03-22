@@ -24,6 +24,8 @@ brew "bmon"
 brew "bottom"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Core application library for C
+brew "glib"
 # C parser in Python
 brew "pycparser"
 # C Foreign Function Interface for Python
@@ -42,10 +44,20 @@ brew "numpy"
 brew "pygit2"
 # Git for data science projects
 brew "dvc"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Image processing and image analysis library
 brew "leptonica"
 # Multi-format archive and compression library
 brew "libarchive"
+# Subtitle renderer for the ASS/SSA subtitle format
+brew "libass"
+# C library SSHv1/SSHv2 client and server protocols
+brew "libssh"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
 # Play, record, convert, and stream audio and video
@@ -90,8 +102,8 @@ brew "libgcrypt"
 brew "libimobiledevice"
 # C library for the MaxMind DB file format
 brew "libmaxminddb"
-# C library SSHv1/SSHv2 client and server protocols
-brew "libssh"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
 # Powerful, lightweight programming language
 brew "lua"
 # Menu-driven communications program
@@ -114,6 +126,8 @@ brew "nmap"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk@11"
+# Painless compression and decompression for your terminal
+brew "ouch"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Python version management
@@ -124,6 +138,8 @@ brew "pyenv-virtualenv"
 brew "qt@5"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Modern Day Portscanner
+brew "rustscan"
 # Rust toolchain installer
 brew "rustup-init"
 # SMART hard drive monitoring
@@ -134,8 +150,12 @@ brew "speexdsp"
 brew "starship"
 # Tool to impose load on and stress test a computer system
 brew "stress"
+# Very fast implementation of tldr in Rust
+brew "tealdeer"
 # Terminal multiplexer
 brew "tmux"
+# Program that allows you to count code, quickly
+brew "tokei"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Command-line interface to the WakaTime api
@@ -152,6 +172,8 @@ brew "wrk"
 brew "xcodegen"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
 # A simple terminal UI for git commands, written in Go
