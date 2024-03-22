@@ -72,7 +72,7 @@ zstyle ':omz:plugins:nvm' lazy yes
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z nvm)
+plugins=(git nvm history)
 
 # homebrew Shell Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -104,6 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ls="lsd --icon=never"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export GPG_TTY=$(tty)
@@ -130,6 +131,11 @@ export PATH=$PATH:$HOME/go/bin
 eval "$(starship init zsh)"
 # fzf
 eval "$(fzf --zsh)"
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
+# export FZF_DEFAULT_COMMAND='rg --files --hidden'
+# zoxide
+eval "$(zoxide init zsh)"
 
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
 # zprof
