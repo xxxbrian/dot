@@ -40,8 +40,6 @@ brew "cryptography"
 brew "curl"
 # Package for scientific computing with Python
 brew "numpy"
-# Bindings to the libgit2 shared library
-brew "pygit2"
 # Git for data science projects
 brew "dvc"
 # Simple, fast and user-friendly alternative to find
@@ -82,6 +80,8 @@ brew "openjdk@17"
 brew "gradle@7"
 # Improved top (interactive process viewer)
 brew "htop"
+# Command-line benchmarking tool
+brew "hyperfine"
 # macOS Big Sur Adaptive Icon Generator
 brew "iconsur"
 # Install and debug iPhone apps from the command-line
@@ -134,6 +134,8 @@ brew "pre-commit"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Bindings to the libgit2 shared library
+brew "pygit2"
 # Cross-platform application and UI framework
 brew "qt@5"
 # Search tool like grep and The Silver Searcher
@@ -224,6 +226,8 @@ cask "gitbutler"
 cask "google-chrome"
 # Client for the Google Drive storage service
 cask "google-drive"
+# Open Source Multimedia Framework
+cask "gstreamer-runtime"
 # App for (re)signing iOS apps and bundling them
 cask "ios-app-signer"
 # Terminal emulator as alternative to Apple's Terminal app
