@@ -12,6 +12,8 @@ brew "xz"
 brew "aom"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Columnar in-memory analytics layer designed to accelerate big data
 brew "apache-arrow"
 # Download with resuming and segmented downloading
@@ -126,6 +128,8 @@ brew "nvm"
 brew "openjdk@11"
 # Painless compression and decompression for your terminal
 brew "ouch"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Python version management
@@ -134,6 +138,8 @@ brew "pyenv"
 brew "pyenv-virtualenv"
 # Bindings to the libgit2 shared library
 brew "pygit2"
+# Python interface to Tcl/Tk
+brew "python-tk@3.12"
 # Cross-platform application and UI framework
 brew "qt@5"
 # Search tool like grep and The Silver Searcher
