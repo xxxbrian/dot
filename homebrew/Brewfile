@@ -94,8 +94,6 @@ brew "ipinfo-cli"
 brew "jq"
 # Neural Network Go engine with no human-provided knowledge
 brew "katago"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Cryptographic library based on the code from GnuPG
 brew "libgcrypt"
 # Library to communicate with iOS devices natively
@@ -324,6 +322,7 @@ vscode "campbellhe.vscode-mips-mars"
 vscode "dbaeumer.vscode-eslint"
 vscode "donjayamanne.python-environment-manager"
 vscode "eamodio.gitlens"
+vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.code-runner"
 vscode "github.copilot"
