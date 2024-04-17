@@ -20,6 +20,8 @@ brew "apache-arrow"
 brew "aria2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# GNU binary tools for native development
+brew "binutils"
 # Interface bandwidth monitor
 brew "bmon"
 # Yet another cross-platform graphical process/system monitor
@@ -44,6 +46,8 @@ brew "curl"
 brew "numpy"
 # Git for data science projects
 brew "dvc"
+# Modern, maintained replacement for ls
+brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # OpenType text shaping engine
@@ -62,6 +66,8 @@ brew "pango"
 brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Modern, performance focused unix commands
+brew "fuc"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Disk usage analyzer with console interface written in Go
@@ -94,6 +100,8 @@ brew "iperf3"
 brew "ipinfo-cli"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
 # Neural Network Go engine with no human-provided knowledge
 brew "katago"
 # Cryptographic library based on the code from GnuPG
@@ -108,6 +116,8 @@ brew "lsd"
 brew "lua"
 # Menu-driven communications program
 brew "minicom"
+# High performance static file server
+brew "miniserve"
 # C library for zip/unzip via zLib
 brew "minizip"
 # 'traceroute' and 'ping' in a single tool
@@ -124,6 +134,8 @@ brew "ninja"
 brew "nmap"
 # Manage multiple Node.js versions
 brew "nvm"
+# HTTP load generator, inspired by rakyll/hey with tui animation
+brew "oha"
 # Development kit for the Java programming language
 brew "openjdk@11"
 # Painless compression and decompression for your terminal
@@ -132,6 +144,8 @@ brew "ouch"
 brew "pipx"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Modern replacement for ps written by Rust
+brew "procs"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
@@ -206,6 +220,8 @@ cask "arduino-ide"
 cask "balenaetcher"
 # Database version management tool
 cask "dbngin"
+# Audio and video editor
+cask "descript"
 # Voice and text chat software
 cask "discord"
 # Social software for creating music short videos
@@ -370,6 +386,8 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "mtxr.sqltools"
 vscode "njpwerner.autodocstring"
+vscode "oven.bun-vscode"
+vscode "oxc.oxc-vscode"
 vscode "pkief.material-icon-theme"
 vscode "pnp.polacode"
 vscode "pranaygp.vscode-css-peek"
@@ -381,6 +399,7 @@ vscode "rvest.vs-code-prettier-eslint"
 vscode "ryanluker.vscode-coverage-gutters"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "shengchen.vscode-checkstyle"
+vscode "skellock.just"
 vscode "sumneko.lua"
 vscode "tamasfe.even-better-toml"
 vscode "tauri-apps.tauri-vscode"
