@@ -33,6 +33,22 @@ zstyle ':omz:plugins:nvm' lazy yes
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
 
+###### fzf-tab https://github.com/Aloxaf/fzf-tab
+# disable sort when completing `git checkout`
+zstyle ':completion:*:git-checkout:*' sort false
+# set descriptions format to enable group support
+# NOTE: don't use escape sequences here, fzf-tab will ignore them
+zstyle ':completion:*:descriptions' format '[%d]'
+# set list-colors to enable filename colorizing
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
+zstyle ':completion:*' menu no
+# preview directory's content with eza when completing cd
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
+# switch group using `<` and `>`
+zstyle ':fzf-tab:*' switch-group '<' '>'
+###### fzf-tab
+
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
 
@@ -72,7 +88,7 @@ zstyle ':omz:plugins:nvm' lazy yes
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm history)
+plugins=(git nvm history fzf-tab)
 
 # homebrew Shell Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -141,6 +157,11 @@ export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
 # zoxide
 eval "$(zoxide init zsh)"
 
+# procs
+# source <(procs --gen-completion-out zsh)
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 # zprof
+
+# Created by `pipx` on 2024-04-06 09:45:41
+export PATH="$PATH:/Users/brian/.local/bin"
