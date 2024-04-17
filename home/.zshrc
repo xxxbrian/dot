@@ -165,3 +165,6 @@ export SAVEHIST=$HISTSIZE
 
 # Created by `pipx` on 2024-04-06 09:45:41
 export PATH="$PATH:/Users/brian/.local/bin"
+
+# bun completions
+[ -s "/Users/brian/.bun/_bun" ] && source "/Users/brian/.bun/_bun"
