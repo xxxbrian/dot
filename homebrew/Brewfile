@@ -220,8 +220,6 @@ cask "arduino-ide"
 cask "balenaetcher"
 # Database version management tool
 cask "dbngin"
-# Audio and video editor
-cask "descript"
 # Voice and text chat software
 cask "discord"
 # Social software for creating music short videos
