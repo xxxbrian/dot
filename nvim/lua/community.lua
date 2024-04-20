@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCommunity: import any community modules here
 -- We import this file in `lazy_setup.lua` before the `plugins/` folder.
@@ -7,6 +7,39 @@ if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
+
+  -- MyConfig
+
+  -- PACK
+  -- # Normal Languages
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.lua" },
-  -- import/override with your plugins folder
+  { import = "astrocommunity.pack.typescript" },
+  -- # Text Languages
+  { import = "astrocommunity.pack.html-css" },
+  { import = "astrocommunity.pack.markdown" },
+  -- # Configuration Languages
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.json" },
+  -- # Frameworks and Tools
+  { import = "astrocommunity.pack.docker" },
+  -- { import = "astrocommunity.pack.vue" }
+
+  -- COMPLETION
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
+
+  -- THEME
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+
+  -- RECIPES
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
+  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  -- { import = "astrocommunity.recipes.vscode-icons" },
+
+  -- UTILITY
+  { import = "astrocommunity.utility.noice-nvim" },
 }
