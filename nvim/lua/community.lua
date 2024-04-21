@@ -35,11 +35,11 @@ return {
   -- THEME
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
-  -- RECIPES
-  { import = "astrocommunity.recipes.heirline-nvchad-statusline" },
-  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
-  -- { import = "astrocommunity.recipes.vscode-icons" },
-
   -- UTILITY
   { import = "astrocommunity.utility.noice-nvim" },
+
+  -- RECIPES
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" }, -- Must after nocie-nvim, otherwise the heirline will have duplicated LSP components.
+  { import = "astrocommunity.recipes.heirline-vscode-winbar" },
+  -- { import = "astrocommunity.recipes.vscode-icons" },
 }
