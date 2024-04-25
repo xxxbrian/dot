@@ -16,6 +16,10 @@ config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.font = wezterm.font("JetBrains Mono")
 config.font_size = 13.0
 
+-- Set the size of the initial window
+config.initial_rows = 35
+config.initial_cols = 110
+
 -- Set the color scheme
 config.colors = {
 	-- The default foreground and background colors ([Shades of Purple] Style)
@@ -99,8 +103,8 @@ wezterm.on("gui-startup", function(cmd) -- set startup Window position
 	local screen_info = wezterm.gui.screens().active
 	local screen_width = screen_info.width
 	local screen_height = screen_info.height
-	local window_width = 1312
-	local window_height = 924
+	local window_width = 1792
+	local window_height = 1310
 	local tab, pane, window = mux.spawn_window(
 		cmd or { position = { x = (screen_width - window_width) / 2, y = (screen_height - window_height) / 2 } }
 	)
