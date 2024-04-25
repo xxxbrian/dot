@@ -18,6 +18,7 @@ return {
   { import = "astrocommunity.pack.java" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.zig" },
   -- # Text Languages
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.markdown" },
@@ -27,6 +28,7 @@ return {
   { import = "astrocommunity.pack.json" },
   -- # Frameworks and Tools
   { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.tailwindcss" },
   -- { import = "astrocommunity.pack.vue" }
 
   -- COMPLETION
