@@ -104,6 +104,8 @@ brew "jq"
 brew "just"
 # Neural Network Go engine with no human-provided knowledge
 brew "katago"
+# Lazier way to manage everything docker
+brew "lazydocker"
 # Cryptographic library based on the code from GnuPG
 brew "libgcrypt"
 # Library to communicate with iOS devices natively
