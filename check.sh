@@ -8,6 +8,7 @@ fi
 
 # duplicate configuration file
 cp ~/.config/starship.toml ./config/starship.toml # starship
+cp -r ~/.config/macchina ./config/macchina # macchina
 
 cp ~/.wezterm.lua ./wezterm/wezterm.lua # wezterm
 
