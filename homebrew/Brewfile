@@ -132,6 +132,8 @@ brew "neofetch"
 brew "neovim"
 # Small build system for use with gyp or CMake
 brew "ninja"
+# App source + Nix packages + Docker = Image
+brew "nixpacks"
 # Port scanning utility for large networks
 brew "nmap"
 # Manage multiple Node.js versions
@@ -388,6 +390,7 @@ vscode "mtxr.sqltools"
 vscode "njpwerner.autodocstring"
 vscode "oven.bun-vscode"
 vscode "oxc.oxc-vscode"
+vscode "pest.pest-ide-tools"
 vscode "pkief.material-icon-theme"
 vscode "pnp.polacode"
 vscode "pranaygp.vscode-css-peek"
