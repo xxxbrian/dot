@@ -14,6 +14,8 @@ brew "aom"
 brew "openssl@3"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Columnar in-memory analytics layer designed to accelerate big data
 brew "apache-arrow"
 # Download with resuming and segmented downloading
@@ -54,8 +56,6 @@ brew "fd"
 brew "harfbuzz"
 # Image processing and image analysis library
 brew "leptonica"
-# Multi-format archive and compression library
-brew "libarchive"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
 # C library SSHv1/SSHv2 client and server protocols
@@ -76,6 +76,10 @@ brew "gdu"
 brew "gh"
 # Git extension for versioning large files
 brew "git-lfs"
+# Powerful, lightweight programming language
+brew "lua"
+# Command-driven, interactive function plotting
+brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Development kit for the Java programming language
@@ -114,8 +118,6 @@ brew "libimobiledevice"
 brew "libmaxminddb"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
-# Powerful, lightweight programming language
-brew "lua"
 # Menu-driven communications program
 brew "minicom"
 # High performance static file server
@@ -182,6 +184,10 @@ brew "tmux"
 brew "tokei"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Source code spell checker
+brew "typos-cli"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Command-line interface to the WakaTime api
 brew "wakatime-cli"
 # Executes a program periodically, showing output fullscreen
@@ -250,6 +256,8 @@ cask "google-chrome"
 cask "google-drive"
 # Open Source Multimedia Framework
 cask "gstreamer-runtime"
+# Free and open-source media player
+cask "iina"
 # App for (re)signing iOS apps and bundling them
 cask "ios-app-signer"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -343,6 +351,7 @@ vscode "antfu.icons-carbon"
 vscode "bitwisecook.tcl"
 vscode "bradlc.vscode-tailwindcss"
 vscode "campbellhe.vscode-mips-mars"
+vscode "charliermarsh.ruff"
 vscode "dbaeumer.vscode-eslint"
 vscode "donjayamanne.python-environment-manager"
 vscode "eamodio.gitlens"
@@ -380,6 +389,7 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode-remote.remote-wsl"
+vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.hexeditor"
 vscode "ms-vscode.live-server"
@@ -403,9 +413,12 @@ vscode "ryanluker.vscode-coverage-gutters"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "shengchen.vscode-checkstyle"
 vscode "skellock.just"
+vscode "stivo.tailwind-fold"
 vscode "sumneko.lua"
 vscode "tamasfe.even-better-toml"
 vscode "tauri-apps.tauri-vscode"
+vscode "tekumara.typos-vscode"
+vscode "twxs.cmake"
 vscode "uctakeoff.vscode-counter"
 vscode "unifiedjs.vscode-mdx"
 vscode "vadimcn.vscode-lldb"
