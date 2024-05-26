@@ -15,6 +15,9 @@ cp ~/.wezterm.lua ./wezterm/wezterm.lua # wezterm
 # duplicate zshrc file
 cp ~/.zshrc ./home/.zshrc
 
+# duplicate editorconfig file
+cp ~/.editorconfig ./home/.editorconfig
+
 # dump homebrew packages
 brew bundle dump --describe --force --file="$(pwd)/homebrew/Brewfile"
 
