@@ -142,6 +142,7 @@ alias gradle7='/opt/homebrew/Cellar/gradle@7/7.6.1/bin/gradle'
 # [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 eval "$(github-copilot-cli alias -- "$0")"
+eval "$(gh copilot alias -- zsh)"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
@@ -168,3 +169,4 @@ export PATH="$PATH:/Users/brian/.local/bin"
 
 # bun completions
 [ -s "/Users/brian/.bun/_bun" ] && source "/Users/brian/.bun/_bun"
+
