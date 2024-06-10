@@ -170,3 +170,9 @@ export PATH="$PATH:/Users/brian/.local/bin"
 # bun completions
 [ -s "/Users/brian/.bun/_bun" ] && source "/Users/brian/.bun/_bun"
 
+# git last commit date edit
+function git-amend-date() {
+  local date=$1
+  GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" git commit --amend --no-edit --date="$date"
+}
+
