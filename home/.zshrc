@@ -28,7 +28,7 @@ ZSH_THEME="robbyrussell"
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-zstyle ':omz:plugins:nvm' lazy yes
+# zstyle ':omz:plugins:nvm' lazy yes
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -88,7 +88,7 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm history fzf-tab)
+plugins=(git history fzf-tab)
 
 # homebrew Shell Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -176,3 +176,4 @@ function git-amend-date() {
   GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" git commit --amend --no-edit --date="$date"
 }
 
+eval "$(mise activate zsh)"
