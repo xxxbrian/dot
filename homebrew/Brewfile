@@ -74,6 +74,8 @@ brew "fuc"
 brew "fzf"
 # Disk usage analyzer with console interface written in Go
 brew "gdu"
+# Nonsense activity generator
+brew "genact"
 # GitHub command-line tool
 brew "gh"
 # Git extension for versioning large files
@@ -126,6 +128,8 @@ brew "minicom"
 brew "miniserve"
 # C library for zip/unzip via zLib
 brew "minizip"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # Tool for querying IP geographic information and CDN provider
@@ -140,8 +144,6 @@ brew "ninja"
 brew "nixpacks"
 # Port scanning utility for large networks
 brew "nmap"
-# Manage multiple Node.js versions
-brew "nvm"
 # HTTP load generator, inspired by rakyll/hey with tui animation
 brew "oha"
 # Development kit for the Java programming language
@@ -242,13 +244,9 @@ cask "epic-games"
 cask "figma"
 # Web browser
 cask "firefox"
-# Free monospaced font with programming ligatures
 cask "font-fira-code"
-# Developer targeted fonts with a high number of glyphs
 cask "font-fira-code-nerd-font"
-# Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
-# Typeface made for developers
 cask "font-jetbrains-mono"
 # Git client for simultaneous branches on top of your existing workflow
 cask "gitbutler"
@@ -328,6 +326,8 @@ cask "tower"
 cask "typora"
 # Management tool for Unity
 cask "unity-hub"
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 # Create, manage, and run virtual machines
