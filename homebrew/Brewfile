@@ -6,6 +6,7 @@ tap "jesseduffield/lazygit"
 tap "oven-sh/bun"
 tap "teamookla/speedtest"
 tap "xgadget-lab/nexttrace"
+tap "xxxbrian/tap"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Codec library for encoding and decoding AV1 video streams
@@ -30,6 +31,8 @@ brew "bmon"
 brew "bottom"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# XML-based font configuration API for X Windows
+brew "fontconfig"
 # Core application library for C
 brew "glib"
 # C parser in Python
@@ -172,6 +175,8 @@ brew "ripgrep"
 brew "rustscan"
 # Rust toolchain installer
 brew "rustup-init"
+# Small man page generator
+brew "scdoc"
 # SMART hard drive monitoring
 brew "smartmontools"
 # Speex audio processing library
@@ -204,6 +209,8 @@ brew "wget"
 brew "wrk"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
+brew "zellij"
 # Programming language designed for robustness, optimality, and clarity
 brew "zig"
 # Shell extension to navigate your filesystem faster
@@ -224,6 +231,8 @@ cask "1password"
 cask "1password-cli"
 # Intelligent cloud storage platform
 cask "adrive"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # iOS App Store alternative
 cask "altserver"
 # Chromium based browser
@@ -248,6 +257,8 @@ cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-noto-color-emoji"
 # Git client for simultaneous branches on top of your existing workflow
 cask "gitbutler"
 # Web browser
