@@ -1,0 +1,61 @@
+[env]
+term = "xterm-256color"
+
+[window]
+decorations = 'Transparent'
+dynamic_padding = true
+
+[window.padding]
+left = 8
+right = 8
+top = 24
+bottom = 6
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+[font.offset]
+x = 1
+y = 1
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = '#131224'
+foreground = '#fdfdfd'
+
+# Cursor colors
+[colors.cursor]
+cursor = '#f8cb37'
+text = 'CellBackground'
+
+# Normal colors
+[colors.normal]
+black = '#24252f'
+blue = '#7d8cec'
+cyan = '#73e1ef'
+green = '#58d8c7'
+magenta = '#bb6ad3'
+red = '#ee768c'
+white = '#fdfdfd'
+yellow = '#ee996d'
+
+# Bright colors
+[colors.bright]
+black = '#393c4d'
+blue = '#4b64f7'
+cyan = '#42d6e9'
+green = '#2edec2'
+magenta = '#a43dc4'
+red = '#fb4566'
+white = '#b6b6b9'
+yellow = '#fc773c'
+
+# Selection colors
+[colors.selection]
+text = "CellForeground"
+background = '#403d52'
