@@ -5,6 +5,7 @@ tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "oven-sh/bun"
 tap "teamookla/speedtest"
+tap "tsonglew/dutis", "https://github.com/tsonglew/dutis"
 tap "xgadget-lab/nexttrace"
 tap "xxxbrian/tap"
 # General-purpose data compression with high compression ratio
@@ -49,6 +50,8 @@ brew "cocoapods"
 brew "cryptography"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Select default apps for documents and URL schemes on macOS
+brew "duti"
 # Package for scientific computing with Python
 brew "numpy"
 # Git for data science projects
@@ -89,8 +92,6 @@ brew "lua"
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Development kit for the Java programming language
-brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # Development kit for the Java programming language
@@ -150,6 +151,8 @@ brew "nmap"
 # HTTP load generator, inspired by rakyll/hey with tui animation
 brew "oha"
 # Development kit for the Java programming language
+brew "openjdk"
+# Development kit for the Java programming language
 brew "openjdk@11"
 # Painless compression and decompression for your terminal
 brew "ouch"
@@ -201,6 +204,8 @@ brew "uv"
 brew "wakatime-cli"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
+# Execute commands when watched files change
+brew "watchexec"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
@@ -223,6 +228,8 @@ brew "jesseduffield/lazygit/lazygit"
 brew "oven-sh/bun/bun"
 # Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
+# A command-line tool to select default applications, based on duti
+brew "tsonglew/dutis/dutis"
 # An open source visual route tracking CLI tool
 brew "xgadget-lab/nexttrace/nexttrace"
 # Password manager that keeps all passwords secure behind one password
