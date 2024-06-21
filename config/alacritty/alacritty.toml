@@ -1,9 +1,16 @@
+[shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "zellij attach -c"]
+
 [env]
-term = "xterm-256color"
+TERM = "xterm-256color"
 
 [window]
 decorations = 'Transparent'
 dynamic_padding = true
+option_as_alt = "Both"
+dimensions = { columns = 140, lines = 45 }
+# position = {  x = 0, y = 0 }
 
 [window.padding]
 left = 8
