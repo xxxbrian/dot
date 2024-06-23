@@ -88,7 +88,7 @@ zstyle ':fzf-tab:*' switch-group '<' '>'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history fzf-tab)
+plugins=(git history fzf-tab fd docker golang rust)
 
 # homebrew Shell Completion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -173,7 +173,9 @@ export PATH="$PATH:/Users/brian/.local/bin"
 # git last commit date edit
 function git-amend-date() {
   local date=$1
-  GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" git commit --amend --no-edit --date="$date"
+  GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" git commit --amend --no-edit --date="$date" --no-verify
 }
 
 eval "$(mise activate zsh)"
+# mise completion
+source <(mise completion zsh)
