@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
+tap "jstkdng/programs"
 tap "oven-sh/bun"
 tap "teamookla/speedtest"
 tap "tsonglew/dutis", "https://github.com/tsonglew/dutis"
@@ -14,14 +15,20 @@ brew "xz"
 brew "aom"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Next generation open source RPC library and framework
+brew "grpc"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# High-performance theorem prover
+brew "z3"
 # Next-gen compiler infrastructure
 brew "llvm"
 # Columnar in-memory analytics layer designed to accelerate big data
 brew "apache-arrow"
 # Download with resuming and segmented downloading
 brew "aria2"
+# B2 Cloud Storage Command-Line Tools
+brew "b2-tools"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # GNU binary tools for native development
@@ -40,12 +47,22 @@ brew "glib"
 brew "pycparser"
 # C Foreign Function Interface for Python
 brew "cffi"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
+# Platform built on V8 to build network applications
+brew "node"
+# CLI tool for Cloudflare Workers
+brew "cloudflare-wrangler2"
 # Cross-platform make
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
+# Static analysis of C and C++ code
+brew "cppcheck"
 # Cryptographic recipes and primitives for Python
 brew "cryptography"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -56,24 +73,32 @@ brew "duti"
 brew "numpy"
 # Git for data science projects
 brew "dvc"
+# C++14 implementation of the TLS-1.3 standard
+brew "fizz"
+# QUIC transport protocol implementation
+brew "mvfst"
+# Modular, composable client/server abstractions framework
+brew "wangle"
+# Facebook's branch of Apache Thrift, including a new C++ server
+brew "fbthrift"
+# Thrift functions for querying information from a service
+brew "fb303"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Image processing and image analysis library
 brew "leptonica"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
 # C library SSHv1/SSHv2 client and server protocols
 brew "libssh"
-# Framework for layout and rendering of i18n text
-brew "pango"
 # OCR (Optical Character Recognition) engine
 brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Create thumbnails for your video files
+brew "ffmpegthumbnailer"
 # Modern, performance focused unix commands
 brew "fuc"
 # Command-line fuzzy finder written in Go
@@ -86,6 +111,8 @@ brew "genact"
 brew "gh"
 # Git extension for versioning large files
 brew "git-lfs"
+# Cryptographic library based on the code from GnuPG
+brew "libgcrypt"
 # Powerful, lightweight programming language
 brew "lua"
 # Command-driven, interactive function plotting
@@ -98,6 +125,8 @@ brew "gradle"
 brew "openjdk@17"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle@7"
+# Post-modern modal text editor
+brew "helix"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -118,12 +147,12 @@ brew "just"
 brew "katago"
 # Lazier way to manage everything docker
 brew "lazydocker"
-# Cryptographic library based on the code from GnuPG
-brew "libgcrypt"
 # Library to communicate with iOS devices natively
 brew "libimobiledevice"
 # C library for the MaxMind DB file format
 brew "libmaxminddb"
+# Next-gen compiler infrastructure
+brew "llvm@16"
 # Clone of ls with colorful output, file type icons, and more
 brew "lsd"
 # Menu-driven communications program
@@ -158,6 +187,8 @@ brew "openjdk@11"
 brew "ouch"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Modern replacement for ps written by Rust
@@ -198,6 +229,8 @@ brew "tokei"
 brew "tree"
 # Source code spell checker
 brew "typos-cli"
+# Command-line unarchiving tools supporting multiple formats
+brew "unar"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Command-line interface to the WakaTime api
@@ -214,6 +247,8 @@ brew "wget"
 brew "wrk"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi", args: ["HEAD"]
 # Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
 # Programming language designed for robustness, optimality, and clarity
@@ -224,6 +259,8 @@ brew "zoxide"
 brew "zsh-syntax-highlighting"
 # A simple terminal UI for git commands, written in Go
 brew "jesseduffield/lazygit/lazygit"
+# Drop in replacement for ueberzug written in C++
+brew "jstkdng/programs/ueberzugpp"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
 # Ookla Speedtest
@@ -260,12 +297,17 @@ cask "epic-games"
 cask "figma"
 # Web browser
 cask "firefox"
+# Web browser
+cask "firefox@developer-edition"
 cask "font-fira-code"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-noto-color-emoji"
+cask "font-symbols-only-nerd-font"
+# Convert RAW images captured with Fujifilm cameras
+cask "fujifilm-x-raw-studio"
 # Git client for simultaneous branches on top of your existing workflow
 cask "gitbutler"
 # Web browser
@@ -350,7 +392,7 @@ cask "utm"
 cask "visual-studio-code"
 # Create, manage, and run virtual machines
 cask "vmware-fusion"
-# Text input app
+# Text input app from WeChat team for Chinese users
 cask "wetype"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
@@ -390,6 +432,7 @@ vscode "kdarkhan.mips"
 vscode "kelvin.vscode-sshfs"
 vscode "leetcode.vscode-leetcode"
 vscode "lennartlence.chadcommit"
+vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
 vscode "mongodb.mongodb-vscode"
