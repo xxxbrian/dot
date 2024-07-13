@@ -11,7 +11,9 @@ cp ~/.config/starship.toml ./config/starship.toml # starship
 cp -r ~/.config/macchina ./config/macchina # macchina
 
 cp ~/.wezterm.lua ./wezterm/wezterm.lua # wezterm
-cp ~/.config/alacritty/alacritty.toml ./config/alacritty/alacritty.toml # alacritty
+cp -r ~/.config/alacritty ./config/alacritty # alacritty
+cp -r ~/.config/helix ./config/helix # helix
+cp -r ~/.config/yazi ./config/yazi # yazi
 
 # duplicate zshrc file
 cp ~/.zshrc ./home/.zshrc
