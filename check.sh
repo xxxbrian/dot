@@ -7,13 +7,13 @@ if [ ! -f "check.sh" ]; then
 fi
 
 # duplicate configuration file
-cp ~/.config/starship.toml ./config/starship.toml # starship
-cp -r ~/.config/macchina ./config/macchina # macchina
+cp ~/.config/starship.toml ./config # starship
+cp -r ~/.config/macchina ./config # macchina
 
 cp ~/.wezterm.lua ./wezterm/wezterm.lua # wezterm
-cp -r ~/.config/alacritty ./config/alacritty # alacritty
-cp -r ~/.config/helix ./config/helix # helix
-cp -r ~/.config/yazi ./config/yazi # yazi
+cp -r ~/.config/alacritty ./config # alacritty
+cp -r ~/.config/helix ./config # helix
+cp -r ~/.config/yazi ./config # yazi
 
 # duplicate zshrc file
 cp ~/.zshrc ./home/.zshrc
