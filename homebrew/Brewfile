@@ -1,6 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
+tap "homebrew/core"
 tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "jstkdng/programs"
@@ -8,7 +8,7 @@ tap "oven-sh/bun"
 tap "teamookla/speedtest"
 tap "tsonglew/dutis", "https://github.com/tsonglew/dutis"
 tap "xgadget-lab/nexttrace"
-tap "xxxbrian/tap"
+tap "xxxbrian/tap", "git@github.com:xxxbrian/homebrew-tap.git"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Codec library for encoding and decoding AV1 video streams
@@ -69,6 +69,8 @@ brew "cryptography"
 brew "curl"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Package for scientific computing with Python
 brew "numpy"
 # Git for data science projects
@@ -83,6 +85,8 @@ brew "wangle"
 brew "fbthrift"
 # Thrift functions for querying information from a service
 brew "fb303"
+# Shared library for Watchman and Eden projects
+brew "edencommon"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -119,6 +123,8 @@ brew "lua"
 brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Development kit for the Java programming language
+brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
 # Development kit for the Java programming language
@@ -180,8 +186,6 @@ brew "nmap"
 # HTTP load generator, inspired by rakyll/hey with tui animation
 brew "oha"
 # Development kit for the Java programming language
-brew "openjdk"
-# Development kit for the Java programming language
 brew "openjdk@11"
 # Painless compression and decompression for your terminal
 brew "ouch"
@@ -203,12 +207,16 @@ brew "pygit2"
 brew "python-tk@3.12"
 # Cross-platform application and UI framework
 brew "qt@5"
+# Rsync for cloud storage
+brew "rclone"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Modern Day Portscanner
 brew "rustscan"
 # Rust toolchain installer
-brew "rustup-init"
+brew "rustup"
+# Experimental Package Management Solution for Python
+brew "rye"
 # Small man page generator
 brew "scdoc"
 # SMART hard drive monitoring
@@ -269,6 +277,8 @@ brew "teamookla/speedtest/speedtest"
 brew "tsonglew/dutis/dutis"
 # An open source visual route tracking CLI tool
 brew "xgadget-lab/nexttrace/nexttrace"
+# 7-Zip is a file archiver with a high compression ratio
+brew "xxxbrian/tap/sevenzip-full"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Command-line interface for 1Password
@@ -276,17 +286,19 @@ cask "1password-cli"
 # Intelligent cloud storage platform
 cask "adrive"
 # GPU-accelerated terminal emulator
-cask "alacritty"
-# iOS App Store alternative
-cask "altserver"
+cask "alacritty-full"
+# Inspect application bundles
+cask "apparency"
 # Chromium based browser
 cask "arc"
 # Electronics prototyping platform
 cask "arduino-ide"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
-# Database version management tool
-cask "dbngin"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
+# Terminal emulator mimicking the old cathode display
+cask "cool-retro-term"
 # Voice and text chat software
 cask "discord"
 # Social software for creating music short videos
@@ -308,16 +320,14 @@ cask "font-noto-color-emoji"
 cask "font-symbols-only-nerd-font"
 # Convert RAW images captured with Fujifilm cameras
 cask "fujifilm-x-raw-studio"
-# Git client for simultaneous branches on top of your existing workflow
-cask "gitbutler"
 # Web browser
 cask "google-chrome"
-# Client for the Google Drive storage service
-cask "google-drive"
 # Open Source Multimedia Framework
 cask "gstreamer-runtime"
 # Free and open-source media player
 cask "iina"
+# Hex editor for reverse engineers
+cask "imhex"
 # App for (re)signing iOS apps and bundling them
 cask "ios-app-signer"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -328,6 +338,8 @@ cask "lm-studio"
 cask "logi-options-plus"
 # UI replacement for volume, brightness and now playing controls
 cask "mediamate"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
 # Sandbox construction video game
@@ -350,12 +362,8 @@ cask "nvidia-geforce-now"
 cask "obs"
 # Replacement for Docker Desktop
 cask "orbstack"
-# Remote desktop
-cask "parsec"
 # Companion app for Flipper Zero devices
 cask "qflipper"
-# Instant messaging tool
-cask "qq"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Open source virtual/remote desktop application
@@ -368,12 +376,20 @@ cask "setapp"
 cask "spacedrive"
 # Music streaming service
 cask "spotify"
+# Rime input method engine
+cask "squirrel"
 # Video game digital distribution service
 cask "steam"
 # Text editor for code, markup and prose
 cask "sublime-text"
 # Network toolbox
 cask "surge"
+# Application for inspecting installer packages
+cask "suspicious-package"
+# Quicklook extension for source files
+cask "syntax-highlight"
+# Mesh VPN based on WireGuard
+cask "tailscale"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Cloud video conferencing
@@ -398,10 +414,8 @@ cask "wetype"
 cask "wezterm"
 # Wine wrapper built with SwiftUI
 cask "whisky"
-# Compatibility layer to run Windows applications
-cask "wine-stable"
 # Network protocol analyzer
-cask "wireshark-chmodbpf"
+cask "wireshark"
 # Multiplayer code editor
 cask "zed"
 # Mesh VPN client
@@ -482,7 +496,6 @@ vscode "tekumara.typos-vscode"
 vscode "twxs.cmake"
 vscode "unifiedjs.vscode-mdx"
 vscode "vadimcn.vscode-lldb"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vscjava.vscode-java-debug"
 vscode "vscjava.vscode-java-dependency"
