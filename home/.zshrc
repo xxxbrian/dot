@@ -126,9 +126,9 @@ alias ls="lsd --icon=never"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export GPG_TTY=$(tty)
 export PATH="$HOME/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/Cellar/openjdk@17/17.0.7/libexec/openjdk.jdk/Contents/Home"
-alias gradle7='/opt/homebrew/Cellar/gradle@7/7.6.1/bin/gradle'
+#export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+#export JAVA_HOME="/opt/homebrew/Cellar/openjdk@17/17.0.7/libexec/openjdk.jdk/Contents/Home"
+#alias gradle7='/opt/homebrew/Cellar/gradle@7/7.6.1/bin/gradle'
 
 # DONT USE PYENV ANYMORE
 # export PYENV_ROOT="$HOME/.pyenv"
@@ -168,6 +168,9 @@ export SAVEHIST=$HISTSIZE
 # Created by `pipx` on 2024-04-06 09:45:41
 export PATH="$PATH:/Users/brian/.local/bin"
 
+# Cargo install bin
+export PATH="$PATH:/Users/brian/.cargo/bin"
+
 # bun completions
 [ -s "/Users/brian/.bun/_bun" ] && source "/Users/brian/.bun/_bun"
 
@@ -197,3 +200,24 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
+# dog (doggo with surge)
+DOG_SURGE_DNS="198.18.0.2"
+DOG_DEFAULT_DNS="https://dns.alidns.com/dns-query"
+
+function dog() {
+    # Check if has spec dns server
+    if [[ "$@" == *@* ]]; then
+        doggo "$@"
+    else
+        # Get systen DNS from /etc/resolv.conf
+        current_dns=$(cat /etc/resolv.conf | grep '^nameserver' | awk '{print $2}' | head -n 1)
+        
+        # Not Surge DNS
+        if [ "$current_dns" != "$DOG_SURGE_DNS" ]; then
+            doggo "$@"
+        else
+            # Is Surge DNS, use dog default dns
+            doggo "$@" @"$DOG_DEFAULT_DNS"
+        fi
+    fi
+}
