@@ -1,6 +1,6 @@
 [shell]
 program = "/bin/zsh"
-args = ["-l", "-c", "zellij attach -c"]
+args = ["-l", "-c", "zellij attach alacritty -c"]
 
 [env]
 TERM = "xterm-256color"
