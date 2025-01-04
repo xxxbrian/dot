@@ -34,6 +34,8 @@ brew "b2-tools"
 brew "bat"
 # GNU binary tools for native development
 brew "binutils"
+# Toolchain of the web
+brew "biome"
 # Interface bandwidth monitor
 brew "bmon"
 # Collection of portable C++ source libraries
@@ -160,6 +162,8 @@ brew "gnuplot"
 brew "go"
 # Library access to GnuPG
 brew "gpgme"
+# Ping, but with a graph
+brew "gping"
 # Development kit for the Java programming language
 brew "openjdk"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
@@ -250,8 +254,14 @@ brew "ollama", restart_service: true
 brew "openjdk@11"
 # Painless compression and decompression for your terminal
 brew "ouch"
+# Suite of high-performance tools for JavaScript and TypeScript written in Rust
+brew "oxlint"
+# Android OTA payload dumper written in Go
+brew "payload-dumper-go"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
+# Fast, disk space efficient package manager
+brew "pnpm"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Framework for managing multi-language pre-commit hooks
@@ -294,6 +304,8 @@ brew "stress"
 brew "swiftformat"
 # Very fast implementation of tldr in Rust
 brew "tealdeer"
+# User interface to the TELNET protocol
+brew "telnet"
 # Terminal multiplexer
 brew "tmux"
 # Program that allows you to count code, quickly
@@ -344,7 +356,7 @@ brew "jstkdng/programs/ueberzugpp"
 brew "oven-sh/bun/bun"
 # speedtest cli
 brew "showwin/speedtest/speedtest"
-# A command-line tool to select default applications, based on duti
+# Command-line tool to manage default applications for file types on macOS
 brew "tsonglew/dutis/dutis"
 # An open source visual route tracking CLI tool
 brew "xgadget-lab/nexttrace/nexttrace"
@@ -397,6 +409,8 @@ cask "font-noto-color-emoji"
 cask "font-symbols-only-nerd-font"
 # Convert RAW images captured with Fujifilm cameras
 cask "fujifilm-x-raw-studio"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Web browser
 cask "google-chrome"
 # Open Source Multimedia Framework
@@ -411,6 +425,8 @@ cask "ios-app-signer"
 cask "iterm2"
 # Discover, download, and run local LLMs
 cask "lm-studio"
+# Open-source cross-platform alternative to AirDrop
+cask "localsend"
 # Software for Logitech devices
 cask "logi-options+"
 # Window manager
@@ -493,6 +509,8 @@ cask "utm"
 cask "visual-studio-code"
 # Create, manage, and run virtual machines
 cask "vmware-fusion"
+# Messaging and calling application
+cask "wechatwork"
 # Text input app from WeChat team for Chinese users
 cask "wetype"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
@@ -511,6 +529,7 @@ cask "zerotier-one"
 cask "zoom"
 vscode "ahmadawais.shades-of-purple"
 vscode "antfu.icons-carbon"
+vscode "antfu.unocss"
 vscode "bitwisecook.tcl"
 vscode "bradlc.vscode-tailwindcss"
 vscode "campbellhe.vscode-mips-mars"
@@ -535,6 +554,7 @@ vscode "kelvin.vscode-sshfs"
 vscode "leetcode.vscode-leetcode"
 vscode "lennartlence.chadcommit"
 vscode "llvm-vs-code-extensions.vscode-clangd"
+vscode "mathiasfrohlich.kotlin"
 vscode "mechatroner.rainbow-csv"
 vscode "mhutchie.git-graph"
 vscode "mongodb.mongodb-vscode"
@@ -596,6 +616,8 @@ vscode "vscodevim.vim"
 vscode "vue.volar"
 vscode "wakatime.vscode-wakatime"
 vscode "wayou.vscode-todo-highlight"
+vscode "webfreak.advanced-local-formatters"
+vscode "wix.vscode-import-cost"
 vscode "yzhang.markdown-all-in-one"
 vscode "ziglang.vscode-zig"
 vscode "zignd.html-css-class-completion"
