@@ -1,4 +1,4 @@
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 args = ["-l", "-c", "zellij attach alacritty -c"]
 
@@ -66,3 +66,5 @@ yellow = '#fc773c'
 [colors.selection]
 text = "CellForeground"
 background = '#403d52'
+
+[terminal]
