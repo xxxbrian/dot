@@ -163,7 +163,6 @@ eval "$(zoxide init zsh)"
 # source <(procs --gen-completion-out zsh)
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
-# zprof
 
 # Created by `pipx` on 2024-04-06 09:45:41
 export PATH="$PATH:/Users/brian/.local/bin"
@@ -221,3 +220,19 @@ function dog() {
         fi
     fi
 }
+
+# check if using correct cargo
+function check_cargo() {
+  cargo_path=$(which cargo 2>/dev/null)
+  
+  if [[ -z "$cargo_path" ]]; then
+    echo "Cargo is not installed or not in PATH."
+    return 1
+  fi
+
+  if [[ "$cargo_path" == "/opt/homebrew/bin/cargo" ]]; then
+    echo "$cargo_path cargo path error"
+  fi
+}
+
+#zprof
