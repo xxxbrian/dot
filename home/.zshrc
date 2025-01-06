@@ -1,193 +1,112 @@
-# set -x
-# zmodload zsh/zprof
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+### Helpers
+IS_VSCODE=false
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+    IS_VSCODE=true
+fi
 
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+### Zsh Configuration
+setopt promptsubst
+setopt interactive_comments
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+PROMPT="%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%} "
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-# zstyle ':omz:plugins:nvm' lazy yes
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-###### fzf-tab https://github.com/Aloxaf/fzf-tab
-# disable sort when completing `git checkout`
+### Zstyle
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*:git-checkout:*' sort false
-# set descriptions format to enable group support
-# NOTE: don't use escape sequences here, fzf-tab will ignore them
 zstyle ':completion:*:descriptions' format '[%d]'
-# set list-colors to enable filename colorizing
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-# force zsh not to show completion menu, which allows fzf-tab to capture the unambiguous prefix
 zstyle ':completion:*' menu no
-# preview directory's content with eza when completing cd
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
-# switch group using `<` and `>`
 zstyle ':fzf-tab:*' switch-group '<' '>'
-###### fzf-tab
+zstyle ':omz:plugins:eza' 'dirs-first' yes
+if ! $IS_VSCODE; then
+    zstyle ':omz:plugins:eza' 'hyperlink' yes
+fi
 
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git history fzf-tab docker golang rust)
-
-# homebrew Shell Completion
+### Env
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="lsd --icon=never"
-
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export GPG_TTY=$(tty)
 export PATH="$HOME/bin:$PATH"
-#export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-#export JAVA_HOME="/opt/homebrew/Cellar/openjdk@17/17.0.7/libexec/openjdk.jdk/Contents/Home"
-#alias gradle7='/opt/homebrew/Cellar/gradle@7/7.6.1/bin/gradle'
-
-# DONT USE PYENV ANYMORE
-# export PYENV_ROOT="$HOME/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-# export PATH="$HOME/.local/bin:$PATH"
-
-# USE OMZ NVM PLUGIN
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-# [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# eval "$(github-copilot-cli alias -- "$0")"
-eval "$(gh copilot alias -- zsh)"
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export NEXTTRACE_DATAPROVIDER=ipinfo
-# go bin
 export PATH=$PATH:$HOME/go/bin
-# starship
-eval "$(starship init zsh)"
-# fzf
-eval "$(fzf --zsh)"
+export PATH="$PATH:/Users/brian/.local/bin"
+export PATH="$PATH:/Users/brian/.cargo/bin"
+export PATH="$PATH:/Users/brian/.cargo/bin"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export FZF_DEFAULT_COMMAND='fd --type file --hidden --no-ignore'
-# export FZF_DEFAULT_COMMAND='rg --files --hidden'
-# zoxide
-eval "$(zoxide init zsh)"
-
-# procs
-# source <(procs --gen-completion-out zsh)
+export NEXTTRACE_DATAPROVIDER=ipinfo
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 
-# Created by `pipx` on 2024-04-06 09:45:41
-export PATH="$PATH:/Users/brian/.local/bin"
+### OMZ
+# zi snippet OMZL::async_prompt.zsh
+# zi snippet OMZL::directories.zsh
+# zi snippet OMZT::robbyrussell
+zi wait lucid light-mode for \
+    OMZL::theme-and-appearance.zsh \
+    OMZL::key-bindings.zsh \
+    OMZL::clipboard.zsh \
+    OMZL::history.zsh \
+    OMZL::git.zsh \
+    OMZP::git \
+    OMZP::history \
+    OMZP::eza \
+    OMZP::extract \
+    OMZP::git-commit \
+    OMZP::rust \
+    OMZP::copyfile
 
-# Cargo install bin
-export PATH="$PATH:/Users/brian/.cargo/bin"
+zi ice wait as"completion" for \
+    OMZP::docker/completions/_docker \
+    OMZP::docker-compose/_docker-compose
 
-# bun completions
-[ -s "/Users/brian/.bun/_bun" ] && source "/Users/brian/.bun/_bun"
+#### Plugins
+# custom lazy snippets
+zi ice wait lucid
+zi snippet ~/.lazy.zsh
 
+# online plugins
+zi wait lucid light-mode depth"1" for \
+    Aloxaf/fzf-tab \
+    orbstack/orbstack \
+    ajeetdsouza/zoxide
+
+# starship
+if $IS_VSCODE; then
+    # vsocde has _precmd and _preexec hooks conflict with starship if we use async
+    zinit ice lucid as"command" from"gh-r" \
+                atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+                atpull"%atclone" src"init.zsh"
+else
+    zinit ice wait lucid as"command" from"gh-r" \
+                atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+                atpull"%atclone" src"init.zsh"
+fi
+zinit light starship/starship
+
+### Custom Functions
 # git last commit date edit
 function git-amend-date() {
   local date=$1
   GIT_AUTHOR_DATE="$date" GIT_COMMITTER_DATE="$date" git commit --amend --no-edit --date="$date" --no-verify
 }
-
-eval "$(mise activate zsh)"
-# mise completion
-source <(mise completion zsh)
-
-# llvm
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-# export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-# export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
-# export LDFLAGS="-L$HOMEBREW_PREFIX/opt/llvm/lib/c++ -Wl,-rpath,$HOMEBREW_PREFIX/opt/llvm/lib/c++"
 
 # yazi
 function yy() {
@@ -202,7 +121,6 @@ function yy() {
 # dog (doggo with surge)
 DOG_SURGE_DNS="198.18.0.2"
 DOG_DEFAULT_DNS="https://dns.alidns.com/dns-query"
-
 function dog() {
     # Check if has spec dns server
     if [[ "$@" == *@* ]]; then
@@ -210,7 +128,6 @@ function dog() {
     else
         # Get systen DNS from /etc/resolv.conf
         current_dns=$(cat /etc/resolv.conf | grep '^nameserver' | awk '{print $2}' | head -n 1)
-        
         # Not Surge DNS
         if [ "$current_dns" != "$DOG_SURGE_DNS" ]; then
             doggo "$@"
@@ -224,15 +141,22 @@ function dog() {
 # check if using correct cargo
 function check_cargo() {
   cargo_path=$(which cargo 2>/dev/null)
-  
   if [[ -z "$cargo_path" ]]; then
     echo "Cargo is not installed or not in PATH."
     return 1
   fi
-
   if [[ "$cargo_path" == "/opt/homebrew/bin/cargo" ]]; then
     echo "$cargo_path cargo path error"
   fi
 }
 
-#zprof
+### Completion
+zi wait lucid light-mode depth"1" for \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zsh-users/zsh-syntax-highlighting \
+  blockf \
+    zsh-users/zsh-completions
+
+### Aliases
+# alias ls="lsd --icon=never"
+# alias ls="eza"
