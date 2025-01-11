@@ -17,7 +17,7 @@ cp -r ~/.config/yazi ./config # yazi
 
 # duplicate zshrc file
 cp ~/.zshrc ./home/.zshrc
-cp ~/.lazy.zsh ./home/.lazy.zsh
+cp -r ~/.config/zinit ./config # zinit
 
 # duplicate editorconfig file
 cp ~/.editorconfig ./home/.editorconfig
