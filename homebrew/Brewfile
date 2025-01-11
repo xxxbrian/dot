@@ -249,7 +249,7 @@ brew "nmap"
 # HTTP load generator, inspired by rakyll/hey with tui animation
 brew "oha"
 # Create, run, and share large language models (LLMs)
-brew "ollama", restart_service: true
+brew "ollama", restart_service: :changed
 # Development kit for the Java programming language
 brew "openjdk@11"
 # Painless compression and decompression for your terminal
