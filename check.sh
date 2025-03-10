@@ -14,6 +14,7 @@ cp ~/.wezterm.lua ./wezterm/wezterm.lua # wezterm
 cp -r ~/.config/alacritty ./config # alacritty
 cp -r ~/.config/helix ./config # helix
 cp -r ~/.config/yazi ./config # yazi
+cp -r ~/.config/git ./config # git
 
 # duplicate zshrc file
 cp ~/.zshrc ./home/.zshrc
