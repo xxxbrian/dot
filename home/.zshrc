@@ -84,7 +84,8 @@ zi wait lucid light-mode as"completion" for \
     OMZP::docker-compose/_docker-compose \
     https://raw.githubusercontent.com/sharkdp/fd/master/contrib/completion/_fd \
     id-as"_rg" \
-        https://raw.githubusercontent.com/BurntSushi/ripgrep/master/crates/core/flags/complete/rg.zsh
+        https://raw.githubusercontent.com/BurntSushi/ripgrep/master/crates/core/flags/complete/rg.zsh \
+    https://raw.githubusercontent.com/jdx/mise/refs/heads/main/completions/_mise
 
 zi wait lucid light-mode depth"1" for \
     atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
