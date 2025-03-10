@@ -30,6 +30,8 @@ brew "apache-arrow"
 brew "aria2"
 # B2 Cloud Storage Command-Line Tools
 brew "b2-tools"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # GNU binary tools for native development
@@ -48,14 +50,14 @@ brew "btop"
 brew "fontconfig"
 # Core application library for C
 brew "glib"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Vector graphics library with cross-device output support
 brew "cairo"
 # C parser in Python
 brew "pycparser"
 # C Foreign Function Interface for Python
 brew "cffi"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Library for encoding and decoding .avif files
@@ -71,7 +73,7 @@ brew "clang-format"
 # Platform built on V8 to build network applications
 brew "node"
 # CLI tool for Cloudflare Workers
-brew "cloudflare-wrangler2"
+brew "cloudflare-wrangler"
 # Cross-platform make
 brew "cmake"
 # Dependency manager for Cocoa projects
@@ -92,12 +94,12 @@ brew "dua-cli"
 brew "duti"
 # GNU compiler collection
 brew "gcc"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
 # Optimized BLAS library
 brew "openblas"
 # Package for scientific computing with Python
 brew "numpy"
+# Bindings to the libgit2 shared library
+brew "pygit2"
 # Git for data science projects
 brew "dvc"
 # Collection of reusable C++ library artifacts developed at Facebook
@@ -200,6 +202,8 @@ brew "iperf3"
 brew "ipinfo-cli"
 # Dex to Java decompiler
 brew "jadx"
+# Interactive JSON filter using jq
+brew "jnv"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Handy way to save and run project-specific commands
@@ -210,6 +214,8 @@ brew "libzip"
 brew "katago"
 # Lazier way to manage everything docker
 brew "lazydocker"
+# Let's Encrypt client and ACME library
+brew "lego"
 # Library to communicate with iOS devices natively
 brew "libimobiledevice"
 # C library for reading and writing MATLAB MAT files
@@ -230,6 +236,8 @@ brew "miniserve"
 brew "minizip"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Modern Linker
+brew "mold"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # QUIC transport protocol implementation
@@ -272,8 +280,6 @@ brew "procs"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Bindings to the libgit2 shared library
-brew "pygit2"
 # Python interface to Tcl/Tk
 brew "python-tk@3.12"
 # Cross-platform application and UI framework
@@ -286,7 +292,7 @@ brew "ripgrep"
 brew "rustscan"
 # Rust toolchain installer
 brew "rustup"
-# Experimental Package Management Solution for Python
+# Package Management Solution for Python (consider the successor "uv" instead)
 brew "rye"
 # Small man page generator
 brew "scdoc"
@@ -386,6 +392,8 @@ cask "arduino-ide"
 cask "balenaetcher"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Desktop client that supports multiple LLM providers
+cask "cherry-studio"
 # Terminal emulator mimicking the old cathode display
 cask "cool-retro-term"
 # Voice and text chat software
@@ -455,6 +463,8 @@ cask "notion"
 cask "nvidia-geforce-now"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Desktop virtualization software
@@ -519,6 +529,8 @@ cask "wezterm"
 cask "whisky"
 # Network protocol analyzer
 cask "wireshark"
+# REST, GraphQL and gRPC client
+cask "yaak"
 # Multiplayer code editor
 cask "zed"
 # Gecko based web browser
@@ -536,7 +548,6 @@ vscode "campbellhe.vscode-mips-mars"
 vscode "charliermarsh.ruff"
 vscode "dbaeumer.vscode-eslint"
 vscode "denoland.vscode-deno"
-vscode "donjayamanne.python-environment-manager"
 vscode "eamodio.gitlens"
 vscode "editorconfig.editorconfig"
 vscode "esbenp.prettier-vscode"
@@ -546,7 +557,6 @@ vscode "github.copilot-chat"
 vscode "github.vscode-github-actions"
 vscode "golang.go"
 vscode "hediet.vscode-drawio"
-vscode "icrawl.discord-vscode"
 vscode "janisdd.vscode-edit-csv"
 vscode "jock.svg"
 vscode "kdarkhan.mips"
@@ -580,7 +590,6 @@ vscode "ms-vscode.live-server"
 vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "njpwerner.autodocstring"
 vscode "openai.openai-chatgpt-adhoc"
 vscode "oven.bun-vscode"
 vscode "oxc.oxc-vscode"
@@ -593,6 +602,7 @@ vscode "reditorsupport.r"
 vscode "rust-lang.rust-analyzer"
 vscode "rvest.vs-code-prettier-eslint"
 vscode "ryanluker.vscode-coverage-gutters"
+vscode "saoudrizwan.claude-dev"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "shengchen.vscode-checkstyle"
 vscode "sj0000e.hexdiff"
@@ -616,7 +626,6 @@ vscode "vscodevim.vim"
 vscode "vue.volar"
 vscode "wakatime.vscode-wakatime"
 vscode "wayou.vscode-todo-highlight"
-vscode "webfreak.advanced-local-formatters"
 vscode "wix.vscode-import-cost"
 vscode "yzhang.markdown-all-in-one"
 vscode "ziglang.vscode-zig"
