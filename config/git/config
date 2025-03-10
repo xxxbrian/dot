@@ -1,0 +1,10 @@
+[user]
+	name = Bojin Li
+	email = git@bojin.li
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEZNuUFp5w2MzSb/xlOtuW7nTWSkHD+RyTqQUAXX0O3w
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
